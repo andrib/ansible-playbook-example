@@ -1,0 +1,7 @@
+- name: Download GlusterFS repo
+  get_url: url=http://download.gluster.org/pub/gluster/glusterfs/LATEST/RHEL/glusterfs-epel.repo dest=/etc/yum.repos.d
+  when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6'"
+
+- name: Install GlusterFS server
+  yum: name=glusterfs-server state=present
+  tags: glusterfs

@@ -1,0 +1,29 @@
+---
+ - name: Install required common packages needed by GlusterFS server
+   action: yum name={{ item }} state=installed
+   tags: common
+   with_items:
+     - curl
+     - git
+     - vim
+     - autoconf 
+     - automake 
+     - bison
+     - bzip2
+     - curl-devel 
+     - gcc-c++ 
+     - glibc
+     - libffi-devel 
+     - libtool
+     - libxml2 
+     - libxml2-devel 
+     - libxslt 
+     - libxslt-devel
+     - make
+     - openssl-devel 
+     - patch 
+     - pcre
+     - readline 
+     - readline-devel
+     - zlib 
+     - zlib-devel 

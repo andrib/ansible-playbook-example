@@ -1,0 +1,4 @@
+---
+ - include: epel.yml
+ - include: glusterfs.yml
+ - include: iscsi.yml

@@ -1,0 +1,14 @@
+*               hard    nofile          {{ global_open_file_limit_each_users }}
+*               soft    nofile          {{ global_open_file_limit_each_users }}
+
+deploy          soft    nofile          {{ global_open_file_limit_each_users }}
+deploy          hard    nofile          {{ global_open_file_limit_each_users }}
+
+www-data        soft    nofile          {{ global_open_file_limit_each_users }}
+www-data        hard    nofile          {{ global_open_file_limit_each_users }}
+
+root            soft    nofile          {{ global_open_file_limit_each_users }}
+root            hard    nofile          {{ global_open_file_limit_each_users }}
+
+nobody          soft    nofile          {{ global_open_file_limit_each_users }}
+nobody          hard    nofile          {{ global_open_file_limit_each_users }}

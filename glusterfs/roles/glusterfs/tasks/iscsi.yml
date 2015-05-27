@@ -1,0 +1,7 @@
+---
+ - name: Install required cpackages for iSCSI multipath
+   action: yum name={{ item }} state=installed
+   tags: iscsi
+   with_items:
+     - iscsi-initiator-utils
+     - device-mapper-multipath

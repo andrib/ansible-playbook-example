@@ -1,0 +1,1 @@
+Installing GlusterFS Server on 2 Centos 6.6 x64

@@ -1,0 +1,9 @@
+---
+ - include: dns.yml
+ - include: ntp.yml
+ - include: users.yml
+ - include: other.yml
+ - include: devtools.yml
+ - include: common.yml
+ - include: essentials.yml
+

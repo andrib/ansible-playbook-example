@@ -1,0 +1,15 @@
+ - name: Essentials | Systcl tweaks and set open file limit
+   tags: [essentials,limits]
+   template: src=essentials/sysctl.conf.j2 dest=/etc/sysctl.conf owner=root group=root mode=0644
+
+ - name: Essentials | Systcl tweaks and set open file limit
+   tags: [essentials,limits]
+   template: src=essentials/limits.conf.j2 dest=/etc/security/limits.conf owner=root group=root mode=0644
+
+ - name: Essentials | ulimit
+   tags: [essentials,limits]
+   shell: ulimit -n {{ global_open_file_limit_each_users }}
+
+ - name: Essentials | ulimit
+   tags: [essentials,limits]
+   shell: sysctl -p

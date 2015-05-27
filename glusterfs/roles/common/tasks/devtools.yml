@@ -1,0 +1,5 @@
+---
+  # Install 'Development Tools'
+- name: Install development tools - Centos/RHEL 6
+  yum: name='@development' state=installed
+  tags: [development_tools]
